@@ -1,0 +1,9 @@
+services:
+  - type: cron
+    name: insta-autopost-cron
+    env: python
+    plan: free
+    schedule: "0 7 * * *"
+    timezone: Asia/Tokyo
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main_job.py"
